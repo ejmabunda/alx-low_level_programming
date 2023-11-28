@@ -11,11 +11,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	// check if the pointers are not NULL before assigning values
-	if (d != NULL && name != NULL && owner != NULL)
-	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
-	}
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
