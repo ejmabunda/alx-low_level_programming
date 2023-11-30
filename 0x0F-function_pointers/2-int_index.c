@@ -12,18 +12,18 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int a;
 	int result;
-
+	
 	if (size <= 0)
 		return (-1);
 	
 	for (a = 0; a < size; a++)
 	{
 		result = (*cmp)(array[a]);
-
+		
 		if (result != 0)
 			return (a);
 	}
-
+	
 	/* not found */
 	return (-1);
 }
