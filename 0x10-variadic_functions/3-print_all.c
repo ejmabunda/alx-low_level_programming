@@ -45,7 +45,7 @@ void print_all(const char * const format, ...)
                         else
                                 printf("%s", args);
                 }
-		else
+		else if (*ptr != 'c' && *ptr != 'i' && *ptr != 'f' && *ptr != 's')
 		{
 			ptr++;
 			continue;
