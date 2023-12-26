@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		printf("0");
+		putchar('0');
 		return;
 	}
 
@@ -29,7 +29,7 @@ void print_binary(unsigned long int n)
 	while (1)
 	{
 		i--;
-		printf("%d", bin[i]);
+		putchar(bin[i] + '0');
 		if (i == 0)
 			break;
 	}
