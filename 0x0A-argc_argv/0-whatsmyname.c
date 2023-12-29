@@ -15,9 +15,16 @@ void whatsmyname(int argc, char *argv[])
 
 	len = argc;
 	len++;
-	puts(argv[0]);
+	printf("%s\n", argv[0]);
 }
 
+/**
+ * main - entry point
+ * @argc: number of command-line arguments, including program's name
+ * @argv: array of command-line arguments, including program's name
+ *
+ * Return: Always 0 (success)
+ */
 int main(int argc, char *argv[])
 {
 	whatsmyname(argc, argv);
