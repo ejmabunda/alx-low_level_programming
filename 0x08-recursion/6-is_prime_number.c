@@ -22,7 +22,7 @@ int is_prime_helper(int n, int a)
 		return (1);
 
 	/* recursive case */
-	return is_prime_helper(n, a + 1);
+	return (is_prime_helper(n, a + 1));
 }
 
 /**
