@@ -6,25 +6,25 @@
  * @nmemb: number of elements
  * @size: size of each element
  *
- * Return: pointer to the allocated memory, NULL on failure or when nmemb
- * or size is 0
+ * Return: this function does not return any value
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *arr;
-	unsigned int a;
+	size_t total;
+	void *ptr;
+	size_t i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	/* Allocate array memory, and check for failures */
-	arr = malloc(nmemb * size);
-	if (arr == NULL)
+	total = nmemb * size;
+	ptr = malloc(total);
+
+	if (ptr == NULL)
 		return (NULL);
 
-	/* Initialize memory to zero */
-	for (a = 0; a < nmemb; a++)
-		*((char *)arr + (a * size)) = 0;
+	for (i = 0; i < total; i++)
+		*((char *)ptr + i) = 0;
 
-	return (arr);
+	return (ptr);
 }
