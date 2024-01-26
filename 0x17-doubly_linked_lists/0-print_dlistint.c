@@ -1,4 +1,4 @@
-#include <stdlib.h>  /* NULL, free */
+#include <stdlib.h>  /* NULL */
 #include <stdio.h>  /* printf */
 
 #include "lists.h"
