@@ -24,7 +24,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	/* initialize the new node */
 	new_node->n = n;
 	new_node->next = NULL;
-	
+
 	/* handle empty list */
 	if (*head == NULL)
 	{
@@ -35,7 +35,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return (*head);
 	}
 	temp = head;
-	
+
 	/* go to end of list and append new node */
 	while ((*temp)->next != NULL)
 		*temp = (*temp)->next;
