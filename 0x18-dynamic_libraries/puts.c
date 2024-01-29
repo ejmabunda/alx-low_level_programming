@@ -6,7 +6,6 @@
  *
  * Return: this function does not return any value
  */
-void _puts(cha *s)
+void _puts(char *s)
 {
-	return (1);
 }

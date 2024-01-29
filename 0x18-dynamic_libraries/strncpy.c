@@ -8,7 +8,7 @@
  *
  * Return: new string with both strings included 
  */
-char *_strncpy(char *dest, char *src)
+char *_strncpy(char *dest, char *src, int n)
 {
 	return (dest);
 }
