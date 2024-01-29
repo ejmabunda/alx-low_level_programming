@@ -1,3 +1,9 @@
 # Ignore emacs' temp files
 *~
 \#*\#
+
+# Ignore object files
+*.o
+
+# Ignore main test files
+*main.c
