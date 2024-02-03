@@ -4,3 +4,5 @@ In this repository, I am learning how to program in a low-level programming lang
 ## Projects
 - `0x17-doubly_linked_lists` - This project explores doubly linked lists in C.
 - `0x18-dynamic_libraries` - This project explores dynamic libraries in C.
+- 0x08.C - Recursion
+>>>>>>> a903ecbbd264d45bee5a390053209dbc6b5c5ab3

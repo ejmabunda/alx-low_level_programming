@@ -1,0 +1,2 @@
+# 0x0D. C - Preprocessor
+This project explores macros, what they are and how to use them. A macro is a fragment of code that has been given a name whenever the name is used, it is replaced byt the contents of the macro.
