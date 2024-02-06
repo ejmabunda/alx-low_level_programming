@@ -7,3 +7,6 @@
 
 # Ignore main test files
 *main.c
+
+# Ignore orig files
+*.orig
