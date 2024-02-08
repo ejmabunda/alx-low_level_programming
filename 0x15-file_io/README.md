@@ -24,3 +24,4 @@ This project explores file handling in C, in one of two ways:
 
 ## Tasks
 1. `0-read_textfile.c` - reads a text file and prints to the `POSIX` standard output.
+2. `1-create_file.c` - creates a file
