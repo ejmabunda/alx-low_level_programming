@@ -24,5 +24,6 @@ This project explores file handling in C, in one of two ways:
 
 ## Tasks
 1. `0-read_textfile.c` - reads a text file and prints to the `POSIX` standard output.
-2. `1-create_file.c` - creates a file
+2. `1-create_file.c` - creates a file.
 3. `2-append_text_to_file.c` - appends text to the end of a file.
+4. `3-cp.c` - copies the content of a file to another file.
