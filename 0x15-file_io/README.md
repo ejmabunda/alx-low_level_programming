@@ -21,3 +21,6 @@ This project explores file handling in C, in one of two ways:
 - `fgets` - read string of chars from a file
 - `fputs` - write string of chars to a file
 - `feof` - detect `EOF` in a file
+
+## Tasks
+1. `0-read_textfile.c` - reads a text file and prints to the `POSIX` standard output.
