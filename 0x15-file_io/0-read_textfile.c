@@ -1,5 +1,7 @@
-#include <stdlib.h> /* NULL */
-#include <stdio.h> /* fopen */
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
 
 #include "main.h"
 
@@ -13,30 +15,40 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t read;
-	FILE *fptr;
-	int c;
+	ssize_t bytes_read, bytes_written; /* number of bytes read, written */
+	char *buffer; /* buffer to store file content */
+	int fd; /* file descriptor */
 
 	if (filename == NULL)
-		return (0);
+		return (0); /* invalid filename */
 
-	read = 0;
-	fptr = fopen(filename, "r");
+	fd = open(filename, O_RDONLY); /* open file for reading */
+	if (fd == -1)
+		return (0); /* can't open file */
 
-	while (read != letters)
+	buffer = (char *)malloc(letters); /* allocate memory for buffer */
+	if (buffer == NULL)
 	{
-		c = fgetc(fptr);
-		if (c == EOF)
-		{
-			_putchar('\n');
-			read++;
-			break;
-		}
-
-		_putchar(c);
-		read++;
+		close(fd);
+		return (0); /* malloc failed */
 	}
 
-	fclose(fptr);
-	return (read);
+	bytes_read = read(fd, buffer, letters); /* read from the file */
+	if (bytes_read == -1)
+	{
+		free(buffer);
+		close(fd);
+		return (0); /* can't read from file */
+	}
+
+	/* print to stdout */
+	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+
+	free(buffer);
+	close(fd); /* clean up */
+
+	if (bytes_written != bytes_read)
+		return (0); /* write error */
+
+	return (bytes_written);
 }
