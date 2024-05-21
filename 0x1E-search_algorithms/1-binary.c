@@ -22,12 +22,14 @@ int binary_search(int *array, size_t size, int value)
  * @left: The leftmost index of the subarray to search in.
  * @right: The rightmost index of the subarray to search in.
  * @value: The value to search for.
+ * @size: The number of elements in @array.
  *
  * Return: The index where 'value' is located, -1 if 'value'
  * is not present, 'array' is NULL, or 'right' is less than 'left'.
  */
 
-int binary_search_helper(int *array, size_t left, size_t right, int value, size_t size)
+int binary_search_helper(int *array, size_t left,
+size_t right, int value, size_t size)
 {
 	size_t mid;
 
@@ -47,7 +49,14 @@ int binary_search_helper(int *array, size_t left, size_t right, int value, size_
 		return (binary_search_helper(array, mid + 1, right, value, size));
 }
 
-
+/**
+ * print_array - Print the array based on its left and right elements.
+ * @array: Pointer to the first element of the array.
+ * @left: First element of the array to print.
+ * @right: Last element of the array to print.
+ *
+ * Return: This function does return any value.
+*/
 void print_array(int *array, size_t left, size_t right)
 {
 	size_t index;
