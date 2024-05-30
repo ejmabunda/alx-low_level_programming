@@ -13,6 +13,8 @@ OBJ = $(SRC:.c=.o)
 # NAME executable
 NAME = school
 
+RM = rm
+
 # Default rule to build the executable
 all: $(NAME)
 
