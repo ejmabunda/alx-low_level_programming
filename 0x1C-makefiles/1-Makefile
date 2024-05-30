@@ -1,14 +1,14 @@
 # Makefile for building the 'school' executable
 
 # Compiler and flags
-CC := gcc
-CFLAGS := -Wall -Werror -Wextra -pedantic
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Source files
-SRC := main.c school.c
+SRC = main.c school.c
 
 # Target executable
-TARGET := school
+TARGET = school
 
 # Default rule to build the executable
 all: $(TARGET)
