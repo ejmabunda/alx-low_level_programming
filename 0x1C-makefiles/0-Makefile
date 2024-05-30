@@ -1,2 +1,22 @@
-all: school
-	gcc main.c school.c -o school
+# Makefile for building the 'school' executable
+
+# Compiler and flags
+CC := gcc
+CFLAGS := -Wall -Werror -Wextra -pedantic
+
+# Source files
+SRCS := main.c school.c
+
+# Target executable
+TARGET := school
+
+# Default rule to build the executable
+all: $(TARGET)
+
+# Compile the source files into the executable
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) -o $(TARGET)
+
+# Clean up generated files
+clean:
+	rm -f $(TARGET)
