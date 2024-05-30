@@ -28,11 +28,11 @@ $(NAME): $(OBJ)
 
 # Clean up generated files
 clean:
-	$(RM) $(OBJ) $(NAME) *~ \#*
+	-$(RM) $(OBJ) $(NAME) *~ \#*
 
 # Clean only object files
 oclean:
-	$(RM) $(OBJ)
+	-$(RM) $(OBJ)
 
 # Clean all generated files (including Emacs and Vim temporary files)
 fclean: clean
